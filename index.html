@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dr. Cristian Ortiz | Bariatría Clínica y Control de Peso — Monterrey</title>
+<meta name="description" content="Dr. Cristian Ortiz | Bariatría Clínica y Control de Peso, en Monterrey. Tratamientos actualizados y seguros para bajar de peso, incluidos GLP-1. Agenda tu cita por WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0f1d35;
+    --navy-2:#1c3358;
+    --teal:#149c92;
+    --teal-deep:#0d6b63;
+    --teal-tint:#dcf2ef;
+    --gold:#d79a4b;
+    --gold-tint:#faedd9;
+    --cream:#ffffff;
+    --sand:#ffffff;
+    --cta:#f2624a;
+    --cta-hover:#e04a31;
+    --ink:#1a2233;
+    --ink-soft:#4c5567;
+    --line:#e3e8ee;
+    --radius:18px;
+    --radius-sm:12px;
+    --radius-pill:999px;
+    --shadow:0 14px 34px -18px rgba(22,36,61,.35);
+    --max:1140px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Inter',system-ui,sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+    line-height:1.6;
+  }
+  h1,h2,h3{
+    font-family:'Fraunces',Georgia,serif;
+    font-weight:500;
+    color:var(--navy);
+    margin:0 0 .5em;
+    letter-spacing:-0.01em;
+  }
+  p{margin:0 0 1em;color:var(--ink-soft);max-width:62ch;}
+  a{color:inherit;}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 28px;}
+  img,svg{display:block;max-width:100%;}
+
+  /* ---------- header ---------- */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(255,255,255,.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 28px;max-width:var(--max);margin:0 auto;}
+  .brand{font-family:'Fraunces',serif;font-size:1.15rem;font-weight:500;color:var(--navy);text-decoration:none;line-height:1.2;}
+  .brand small{display:block;font-family:'Inter',sans-serif;font-size:.7rem;color:var(--teal-deep);font-weight:600;}
+  .nav-links{display:flex;gap:28px;list-style:none;margin:0;padding:0;}
+  .nav-links a{text-decoration:none;font-size:.92rem;color:var(--ink);border-bottom:1px solid transparent;padding-bottom:2px;transition:border-color .15s;}
+  .nav-links a:hover{border-color:var(--teal);}
+  .nav-cta{
+    display:inline-flex;align-items:center;gap:8px;
+    background:var(--cta);color:#fff;text-decoration:none;
+    padding:10px 18px;border-radius:var(--radius-pill);font-size:.9rem;font-weight:600;
+    white-space:nowrap;
+  }
+  .nav-cta:hover{background:var(--cta-hover);}
+  .menu-btn{display:none;background:none;border:1px solid var(--navy);border-radius:3px;padding:8px 10px;cursor:pointer;}
+  .menu-btn span,.menu-btn span::before,.menu-btn span::after{content:"";display:block;width:18px;height:2px;background:var(--navy);position:relative;}
+  .menu-btn span::before{position:absolute;top:-6px;}
+  .menu-btn span::after{position:absolute;top:6px;}
+
+  /* ---------- hero ---------- */
+  .hero{padding:72px 0 56px;}
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;}
+  .eyebrow{font-size:.85rem;color:var(--teal-deep);font-weight:600;margin-bottom:14px;}
+  .hero h1{font-size:clamp(2.1rem,4vw,2.9rem);line-height:1.12;}
+  .hero p.lead{font-size:1.08rem;color:var(--ink-soft);margin-bottom:28px;}
+  .hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:30px;}
+  .btn-primary{
+    display:inline-flex;align-items:center;gap:10px;
+    background:var(--cta);color:#fff;text-decoration:none;
+    padding:15px 28px;border-radius:var(--radius-pill);font-weight:600;font-size:1rem;
+    transition:background .15s, transform .15s, box-shadow .15s;
+    box-shadow:0 14px 28px -12px rgba(242,98,74,.55);
+  }
+  .btn-primary:hover{background:var(--cta-hover);transform:translateY(-2px);}
+  .btn-primary svg{width:18px;height:18px;flex:none;}
+  .btn-ghost{
+    display:inline-flex;align-items:center;
+    padding:15px 24px;border:1.5px solid var(--navy);border-radius:var(--radius-pill);
+    text-decoration:none;font-weight:600;font-size:1rem;color:var(--navy);
+    transition:transform .15s, background .15s;
+  }
+  .btn-ghost:hover{transform:translateY(-2px);background:var(--teal-tint);}
+  .hero-facts{display:flex;flex-wrap:wrap;gap:24px;font-size:.88rem;color:var(--ink-soft);}
+  .hero-facts div{display:flex;gap:8px;align-items:flex-start;}
+  .hero-facts svg{width:16px;height:16px;flex:none;margin-top:2px;color:var(--teal-deep);}
+
+  .hero-art{
+    background:linear-gradient(160deg,var(--navy),var(--teal-deep));
+    border-radius:32px;
+    aspect-ratio:4/5;
+    position:relative;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+    transform:rotate(1.5deg);
+    padding:22px;
+    display:flex;flex-direction:column;gap:14px;
+  }
+  .med-eyebrow{color:#dff3ef;font-size:.78rem;font-weight:600;letter-spacing:.02em;}
+  .med-grid{flex:1;display:grid;grid-template-columns:1.1fr 1fr;grid-template-rows:1fr 1fr;gap:10px;}
+  .med-tile{margin:0;position:relative;border-radius:14px;overflow:hidden;background:#fff;}
+  .med-mounjaro{grid-row:1 / 3;}
+  .med-tile img{width:100%;height:100%;object-fit:cover;display:block;}
+  .med-tile figcaption{position:absolute;left:0;right:0;bottom:0;padding:10px 12px 8px;background:linear-gradient(0deg,rgba(15,29,53,.85),transparent);color:#fff;font-size:.82rem;font-weight:600;}
+  .med-tile figcaption span{display:block;font-weight:400;font-size:.72rem;color:#dff3ef;}
+  @media (prefers-reduced-motion: reduce){.hero-art .dot-float,.hero-art .dot-float2{animation:none;}}
+
+  /* ---------- section basics ---------- */
+  section{padding:64px 0;}
+  .section-head{max-width:640px;margin-bottom:40px;}
+  .section-head .eyebrow{margin-bottom:10px;}
+  .section-head h2{font-size:clamp(1.6rem,3vw,2.1rem);}
+
+  /* ---------- about ---------- */
+  .about{background:#fff;border:1px solid var(--line);border-radius:40px;margin:0 20px;box-shadow:0 20px 50px -30px rgba(22,36,61,.2);}
+  .about-grid{display:grid;grid-template-columns:.9fr 1.5fr;gap:48px;align-items:start;}
+  .about-cred{border-left:2px solid var(--teal);padding-left:20px;}
+  .about-cred p{font-size:.92rem;margin-bottom:14px;}
+  .about-cred strong{display:block;color:var(--navy);font-size:1rem;margin-bottom:2px;}
+
+  /* ---------- treatments ---------- */
+  .tx-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;}
+  .tx-card{
+    background:#fff;padding:32px;border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    transition:transform .2s, box-shadow .2s;
+  }
+  .tx-card:hover{transform:translateY(-5px);box-shadow:0 20px 40px -18px rgba(22,36,61,.45);}
+  .tx-card:nth-child(even){transform:translateY(18px);}
+  .tx-card:nth-child(even):hover{transform:translateY(13px);}
+  .tx-card h3{font-size:1.2rem;margin-bottom:10px;}
+  .tx-card p{font-size:.94rem;margin-bottom:14px;}
+  .tx-tag{display:inline-block;font-size:.78rem;font-weight:600;color:var(--teal-deep);background:var(--teal-tint);padding:6px 12px;border-radius:var(--radius-pill);}
+  .tx-card:nth-child(2n) .tx-tag{color:#a8681c;background:var(--gold-tint);}
+
+  /* ---------- reviews ---------- */
+  .reviews{background:#fff;}
+  .reviews .wrap{max-width:820px;text-align:center;}
+  .reviews .section-head{margin:0 auto 32px;}
+  .reviews-box{background:#fff;border:1px solid var(--line);border-radius:28px;padding:44px 48px 34px;box-shadow:var(--shadow);position:relative;}
+  .reviews-box::before{content:"\201C";font-family:'Fraunces',Georgia,serif;font-size:7rem;line-height:1;color:var(--teal);opacity:.22;position:absolute;top:10px;left:28px;}
+  .carousel-viewport{overflow:hidden;}
+  .carousel-track{display:flex;transition:transform .5s ease;}
+  .carousel-slide{flex:0 0 100%;min-width:100%;padding:0 4px;}
+  .carousel-slide .stars{color:var(--gold);font-size:1.1rem;letter-spacing:3px;margin-bottom:16px;}
+  .carousel-slide .quote{color:var(--ink);font-size:1.05rem;line-height:1.7;max-width:none;margin:0 auto 12px;min-height:10.2em;display:-webkit-box;-webkit-line-clamp:6;-webkit-box-orient:vertical;overflow:hidden;}
+  .carousel-slide .quote.open{display:block;min-height:0;-webkit-line-clamp:unset;}
+  .read-more{background:none;border:0;padding:0;margin:0 0 14px;color:var(--teal-deep);font-weight:600;font-size:.9rem;cursor:pointer;text-decoration:underline;}
+  .carousel-slide .author{color:var(--teal-deep);font-size:.85rem;font-weight:600;}
+  .carousel-controls{display:flex;gap:14px;align-items:center;justify-content:center;margin:22px 0 26px;}
+  .carousel-arrow{background:#fff;border:1.5px solid var(--teal);color:var(--teal-deep);width:42px;height:42px;border-radius:50%;cursor:pointer;font-size:1.3rem;line-height:1;display:flex;align-items:center;justify-content:center;transition:background .15s,color .15s;}
+  .carousel-arrow:hover{background:var(--teal);color:#fff;}
+  .carousel-count{font-size:.85rem;color:var(--ink-soft);min-width:52px;}
+  @media (prefers-reduced-motion: reduce){.carousel-track{transition:none;}}
+
+  /* ---------- resources ---------- */
+  .resources{background:var(--sand);}
+  .res-list{display:flex;flex-direction:column;gap:16px;}
+  .res-item{background:#fff;display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;padding:26px 30px;border:1px solid var(--line);border-radius:var(--radius-sm);box-shadow:0 10px 26px -16px rgba(22,36,61,.25);}
+  .res-item h3{font-size:1.05rem;margin-bottom:4px;}
+  .res-item .meta{font-size:.85rem;color:var(--ink-soft);}
+  .res-item .price{font-weight:600;color:var(--navy);margin-right:14px;}
+  .res-cta{
+    display:inline-flex;align-items:center;gap:8px;white-space:nowrap;
+    text-decoration:none;font-weight:600;font-size:.88rem;
+    border:1.5px solid var(--navy);color:var(--navy);padding:11px 20px;border-radius:var(--radius-pill);
+    transition:transform .15s;
+  }
+  .res-cta:hover{transform:translateY(-2px);}
+  .res-cta:hover{background:var(--navy);color:#fff;}
+  .res-cta.free{border-color:var(--teal-deep);color:var(--teal-deep);}
+  .res-cta.free:hover{background:var(--teal-deep);color:#fff;}
+  .res-cta.pending{opacity:.55;cursor:not-allowed;}
+  .res-cta.pending:hover{transform:none;background:none;color:var(--navy);}
+  .res-cta.pending.free:hover{background:none;color:var(--teal-deep);}
+  .res-note{font-size:.8rem;color:var(--ink-soft);margin-top:18px;}
+
+  /* ---------- location ---------- */
+  .location .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:stretch;}
+  .loc-details h3{font-size:1rem;color:var(--navy);margin:22px 0 6px;}
+  .loc-details h3:first-child{margin-top:0;}
+  .loc-details p{font-size:.94rem;}
+  .map-panel{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:36px;display:flex;flex-direction:column;align-items:flex-start;gap:14px;justify-content:center;}
+  .map-panel p{font-size:.94rem;margin:0;}
+
+  /* ---------- final cta ---------- */
+  .final-cta{background:linear-gradient(120deg,var(--navy),var(--teal-deep));text-align:center;}
+  .final-cta h2{font-size:clamp(1.5rem,3vw,2rem);color:#fff;}
+  .final-cta p{margin:0 auto 26px;color:#cfe3e0;}
+  .final-cta .btn-primary{box-shadow:none;}
+
+  /* ---------- footer ---------- */
+  footer{background:var(--navy);color:#aab4c7;padding:44px 0 28px;font-size:.85rem;line-height:1.6;}
+  footer .wrap{display:block;}
+  footer a{color:#dfe4ee;text-decoration:none;}
+  footer a:hover{text-decoration:underline;}
+  footer strong{color:#fff;font-weight:600;}
+  .foot-grid{display:grid;grid-template-columns:1.2fr 1.2fr 1fr;gap:28px;}
+  .foot-grid h4{margin:0 0 8px;color:#fff;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;font-weight:600;}
+  .foot-grid p{margin:0;}
+  .foot-legal{margin-top:28px;padding-top:18px;border-top:1px solid rgba(255,255,255,.14);font-size:.78rem;color:#8f9bb2;}
+  .foot-legal p{margin:0 0 8px;}
+  .link-btn{background:none;border:0;padding:0;font:inherit;color:#dfe4ee;text-decoration:underline;cursor:pointer;}
+  .link-btn:hover{color:#fff;}
+
+  /* ---------- aviso de privacidad (modal) ---------- */
+  dialog.privacy{width:min(760px,calc(100% - 32px));max-height:86vh;border:0;border-radius:var(--radius);padding:0;box-shadow:0 30px 80px -20px rgba(15,29,53,.55);color:var(--ink);}
+  dialog.privacy::backdrop{background:rgba(15,29,53,.6);}
+  .privacy-head{position:sticky;top:0;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 24px;background:#fff;border-bottom:1px solid var(--line);}
+  .privacy-head h2{margin:0;font-size:1.25rem;}
+  .privacy-close{border:0;background:var(--teal-tint);color:var(--teal-deep);width:36px;height:36px;border-radius:50%;font-size:1.3rem;line-height:1;cursor:pointer;}
+  .privacy-body{padding:8px 24px 26px;font-size:.93rem;line-height:1.65;}
+  .privacy-body h3{margin:22px 0 6px;font-size:1rem;color:var(--teal-deep);}
+  .privacy-body p,.privacy-body ul{margin:0 0 8px;}
+  .privacy-body ul{padding-left:20px;}
+  .privacy-body .upd{color:var(--ink-soft);font-size:.82rem;}
+
+  @media (max-width:860px){
+    .foot-grid{grid-template-columns:1fr;gap:22px;}
+    .nav-links{position:fixed;top:65px;left:0;right:0;background:var(--cream);flex-direction:column;gap:0;border-bottom:1px solid var(--line);display:none;}
+    .nav-links.open{display:flex;}
+    .nav-links a{display:block;padding:16px 28px;border-bottom:1px solid var(--line);}
+    .menu-btn{display:block;}
+    .hero-grid,.about-grid,.reviews .wrap,.location .wrap{grid-template-columns:1fr;}
+    .hero-art{order:-1;aspect-ratio:16/9;}
+    .tx-grid{grid-template-columns:1fr;}
+    .tx-card:nth-child(even){transform:none;}
+    .tx-card:nth-child(even):hover{transform:translateY(-5px);}
+    .res-item{grid-template-columns:1fr;align-items:flex-start;}
+    .about{margin:0;border-radius:0;}
+    .hero-art{transform:none;}
+    .reviews-box{padding:36px 22px 26px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <a class="brand" href="#top">Dr. Cristian Ortiz<small>Bariatría Clínica y Control de Peso</small></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#tratamientos">Tratamientos</a></li>
+      <li><a href="#resenas">Reseñas</a></li>
+      <li><a href="#recursos">Recursos</a></li>
+      <li><a href="#ubicacion">Ubicación</a></li>
+    </ul>
+    <div style="display:flex;align-items:center;gap:10px;">
+      <a class="nav-cta" href="https://wa.me/528120318198?text=Hola%2C%20quiero%20agendar%20una%20consulta" target="_blank" rel="noopener">Agendar cita</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menú"><span></span></button>
+    </div>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">Dr. Cristian Ortiz | Bariatría Clínica y Control de Peso · Monterrey, N.L.</div>
+        <h1>Tu tratamiento con GLP-1, acompañado por un médico especialista.</h1>
+        <p class="lead">Consulta médica personalizada para bajar de peso y mejorar tu salud metabólica, con tratamientos actualizados y seguros — incluidos GLP-1 — y seguimiento clínico real, no solo una receta.</p>
+        <div class="hero-ctas">
+          <a class="btn-primary" href="https://wa.me/528120318198?text=Hola%2C%20quiero%20agendar%20una%20consulta" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-1-.3-.1-.5-.1-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.3L2 22l4.8-1.5c1.5.8 3.3 1.3 5.2 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.7 0-3.4-.5-4.8-1.3l-.3-.2-3.4 1 1-3.3-.2-.3C3.5 14.6 3 13.3 3 12c0-4.9 4-8.9 9-8.9s9 4 9 8.9-4 9.2-9 9.2z"/></svg>
+            Agendar cita por WhatsApp
+          </a>
+          <a class="btn-ghost" href="#tratamientos">Ver tratamientos</a>
+        </div>
+        <div class="hero-facts">
+          <div>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.1-7-11a7 7 0 0 1 14 0c0 4.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            CAB Medical, Plaza Sikara, Cumbres Madeira, Monterrey
+          </div>
+          <div>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+            Atención solo con previa cita
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-art">
+        <div class="med-eyebrow">Medicamentos GLP-1 que manejamos</div>
+        <div class="med-grid">
+          <figure class="med-tile med-mounjaro">
+            <img src="assets/mounjaro.png" alt="Pluma Mounjaro (tirzepatida)" loading="lazy">
+            <figcaption>Mounjaro<span>Tirzepatida</span></figcaption>
+          </figure>
+          <figure class="med-tile">
+            <img src="assets/wegovy.png" alt="Pluma Wegovy (semaglutida)" loading="lazy">
+            <figcaption>Wegovy<span>Semaglutida</span></figcaption>
+          </figure>
+          <figure class="med-tile">
+            <img src="assets/foundayz.png" alt="Foundayz en tableta (orforglipron)" loading="lazy">
+            <figcaption>Foundayz<span>Orforglipron, oral</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+  <section class="about" id="sobre-mi">
+    <div class="wrap about-grid">
+      <div class="about-cred">
+        <p><strong>Dr. Cristian Ortiz</strong>Bariatría Clínica y Control de Peso</p>
+        <p><strong>Formación</strong>U. A. N. L. — Benemérita Universidad Autónoma de Puebla</p>
+        <p><strong>Enfoque</strong>Atención médica individualizada para obesidad, control de peso y enfermedades metabólicas, sin prejuicios. Evalúo tu historia clínica, salud metabólica y hábitos para entender qué puede estar influyendo en tu peso y tu salud y definir contigo un plan de tratamiento.</p>
+      </div>
+      <div>
+        <div class="eyebrow">Sobre la consulta</div>
+        <h2>El control de peso empieza por entender qué está pasando contigo</h2>
+        <p>En la primera consulta revisamos tus antecedentes, tu estilo de vida, tus hábitos, objetivos y tu estado metabólico actual. A partir de esa evaluación planteamos un tratamiento acorde contigo y tus posibilidades, que puede incluir alimentación, actividad física y medicamentos cuando están indicados.</p>
+        <p>Te explico por qué elegimos cada paso y damos seguimiento a tu evolución para hacer ajustes cuando sea necesario. El progreso no se mide únicamente en kilos: también importa cómo cambia tu salud y cómo te sientes durante el proceso.</p>
+        <p>Puedes atenderte de forma presencial en Monterrey o por videollamada.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TRATAMIENTOS ================= -->
+  <!--
+    SECCIÓN EDITABLE DE TRATAMIENTOS
+    Para agregar o modificar un tratamiento, copia un bloque <article class="tx-card">...</article>
+    y cambia el título, la descripción y la etiqueta "Indicado para". No es necesario tocar el CSS.
+  -->
+  <section id="tratamientos">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Tratamientos</div>
+        <h2>Opciones de tratamiento para bajar de peso y control metabólico</h2>
+      </div>
+
+      <div class="tx-grid">
+        <article class="tx-card">
+          <h3>Semaglutida (Wegovy/Ozempic)</h3>
+          <p>Tratamiento inyectable semanal que actúa sobre el apetito y el control glucémico. Si es adecuado para ti, y en qué dosis, se define en consulta según tu historia clínica y tus objetivos — no es una indicación automática.</p>
+          <span class="tx-tag">Requiere valoración individual</span>
+        </article>
+
+        <article class="tx-card">
+          <h3>Tirzepatida (Mounjaro)</h3>
+          <p>Terapia de doble acción con mayor efecto sobre la pérdida de peso. Como con cualquier tratamiento GLP-1, usarla o no y en qué dosis se decide caso por caso, tras evaluar tu situación.</p>
+          <span class="tx-tag">Requiere valoración individual</span>
+        </article>
+
+        <article class="tx-card">
+          <h3>Foundayz (orforglipron)</h3>
+          <p>GLP-1 oral de aprobación reciente, en tableta y sin inyecciones — un tratamiento anorexígeno oral. Su indicación también depende de una valoración médica previa.</p>
+          <span class="tx-tag">Requiere valoración individual</span>
+        </article>
+
+        <article class="tx-card">
+          <h3>Seguimiento metabólico híbrido</h3>
+          <p>Plan de acompañamiento continuo con ajuste de dosis, laboratorios de control y orientación nutricional, presencial o por telemedicina.</p>
+          <span class="tx-tag">Indicado para: pacientes ya en tratamiento con GLP-1</span>
+        </article>
+
+        <article class="tx-card">
+          <h3>Consulta de valoración inicial</h3>
+          <p>Revisamos tus antecedentes, tu estilo de vida, tus hábitos, tus objetivos y tu estado metabólico actual, para definir juntos un plan de tratamiento.</p>
+          <span class="tx-tag">Duración: 60 minutos</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= RESEÑAS ================= -->
+  <!--
+    CARRUSEL DE RESEÑAS
+    Contiene 16 reseñas reales que Doc proporcionó. Todas se muestran con 5 estrellas y
+    "Reseña verificada en Google" como autor, porque el texto original no incluía calificación
+    ni nombre del paciente. Para agregar más, copia un bloque <div class="carousel-slide">...</div>
+    completo dentro de #carouselTrack — el carrusel se ajusta solo.
+  -->
+  <section class="reviews" id="resenas">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Pacientes</div>
+        <h2>Lo que dicen los pacientes en Google</h2>
+      </div>
+      <div class="reviews-box" id="reviewsCarousel">
+        <div class="carousel-viewport">
+          <div class="carousel-track" id="carouselTrack">
+            <div class="carousel-slide">
+              <div class="stars">★★★★★</div>
+              <p class="quote">"Mi experiencia con el Dr. ha sido excelente. Yo tenía resistencia a la insulina y me costaba mucho bajar. Con el tratamiento inyectado que me dio se me quitó la resistencia y después me cambió a pastillas que me quitaron los antojos. Al inicio bajé de peso y fue difícil, pero baje más en medidas que en peso de acuerdo a mi organismo que es muy lento pero también el Dr Es súper atento, te explica todo detalladamente, te deja la dieta en portal de avena que me encanta y te manda ejercicios. Lo recomiendo al 100%."</p>
+              <div class="author">Reseña verificada en Google</div>
+            </div>
+            <div class="carousel-slide">
+              <div class="stars">★★★★★</div>
+              <p class="quote">"¡Excelente médico! Muy atento, además de que los tratamientos te los da personalizados de acuerdo a la necesidad y tu estado de salud, el seguimiento es excelente y si he obtenido excelentes resultados, muy buenos tratamientos para la pérdida de peso y resistencia a la insulina."</p>
+              <div class="author">Reseña verificada en Google</div>
+            </div>
+            <div class="carousel-slide">
+              <div class="stars">★★★★★</div>
+              <p class="quote">"Excelente médico. Muy profesional. Te revisa muy bien antes de saber que tratamiento es el adecuado para cada caso. Me encanta que te explica muy bien el plan a seguir, el tratamiento y si te aplicas con la alimentación, tratamiento y ejercicio obtienes excelentes resultados. Además de que no  solamente te da el tratamiento también te explica la alimentación y se apoya con la app avena en la cual tienes dintintas opciones. Además de que ahí mismo te pone rutina de ejercicios de acuerdo a tus necesidades.<br>Sin duda alguna recomiendo ampliamente al doctor.<br>En casi un año en lo personal he logrado excelentes resultados (más de 30 kilos). Me siento con más energía y de salud me encuentro de maravilla. De tener obesidad grado tres a tener sobre peso."</p>
+              <div class="author">Reseña verificada en Google</div>
+            </div>
+            <div class="carousel-slide">
+              <div class="stars">★★★★★</div>
+              <p class="quote">"Quiero agradecer y recomendar ampliamente al Dr.Cristian Ortiz Es un excelente médico bariatra, muy profesional, humano y atento en todo momento. Su atención es de primera, te escucha, te orienta y te acompaña en todo el proceso sin hacerte sentir juzgado. Me sentí con mucha confianza desde el día uno. Sin duda de los mejores, lo recomiendo al 100%"</p>
+              <div class="author">Reseña verificada en Google</div>
+            </div>
+            <div class="carousel-slide">
+              <div class="stars">★★★★★</div>
+              <p class="quote">"Quiero agradecer al doctor Cristian, por acompañarme en este proceso de cambio. Gracias a su asesoría y al plan que diseñó para mí, logré bajar más de 10 kilos, aumentar mi masa muscular y, lo más importante, adoptar hábitos saludables que han transformado mi estilo de vida. Su profesionalismo, seguimiento y motivación hicieron que el proceso fuera sostenible y efectivo. Sin duda, lo recomiendo ampliamente a cualquier persona que busque mejorar su salud de manera integral. ¡Muchas gracias, doctor, por ayudarme a alcanzar estos resultados!"</p>
+              <div class="author">Reseña verificada en Google</div>
+            </div>
+            <div class="carousel-slide">
+              <div class="stars">★★★★★</div>
+              <p class="quote">"Excelente atención y profesionalismo, el doctor explica todo de forma clara y detallada, resolviendo cualquier duda con paciencia."</p>
+              <div class="author">Reseña verificada en Google</div>
+            </div>
+            <div class="carousel-slide">
+              <div class="stars">★★★★★</div>
+              <p class="quote">"El tratamiento me ha funcionado muy bien y tengo AR, estoy muy satisfecha con los resultados.<br>Lo recomiendo ampliamente."</p>
+              <div class="author">Reseña verificada en Google</div>
+            </div>
+            <div class="carousel-slide">
+              <div class="stars">★★★★★</div>
+              <p class="quote">"Me encantó la atención y que el enfoque es súper integral, no solo se habla de alimentos, por otro lado en el tema del plan que se me dió me he sentido súper cómoda, antes fui a otros lugares y esta es la primera vez que siento que puedo llevar el plan de manera sostenible a largo plazo, es decir para toda la vida. Muy recomendado 💯"</p>
+              <div class="author">Reseña verificada en Google</div>
+            </div>
+            <div class="carousel-slide">
+              <div class="stars">★★★★★</div>
+              <p class="quote">"Excelente médico, me siento muy apoyada en el tratamiento además me da seguimiento contestante, tomo la sesión en línea y he tenido resultados muy satisfactorios."</p>
+              <div class="author">Reseña verificada en Google</div>
+            </div>
+            <div class="carousel-slide">
+              <div class="stars">★★★★★</div>
+              <p class="quote">"Excelente servicio, ya que ha resuelto mis dudas y he progresado en mi tratamiento y en cualquier duda me ha ayudado a aclarlas y por lo resultados que antes no había logrado, muchas gracias"</p>
+              <div class="author">Reseña verificada en Google</div>
+            </div>
+            <div class="carousel-slide">
+              <div class="stars">★★★★★</div>
+              <p class="quote">"Excelente servicio, muy buena atención, da información detallada y facil de comprender, además de aclarar dudas y apoyar durante el seguimiento."</p>
+              <div class="author">Reseña verificada en Google</div>
+            </div>
+            <div class="carousel-slide">
+              <div class="stars">★★★★★</div>
+              <p class="quote">"Excelente atención y profesionalismo. Desde el inicio me he sentido muy bien acompañado durante todo mi proceso. El Dr. se toma el tiempo de escuchar, explicar cada indicación con claridad y resolver todas las dudas, siempre con un trato cercano, respetuoso y humano.<br>Algo que valoro muchísimo es que no se limita solamente a darte un tratamiento, sino que realmente se interesa en tu progreso, en cómo te estás sintiendo y en buscar la mejor opción para ti.<br>He tenido muy buenos resultados y, sobre todo, me he sentido con la confianza de estar llevando mi proceso con alguien que sabe lo que hace y que genuinamente se preocupa por sus pacientes.<br>Lo recomiendo ampliamente. Sin duda, una excelente experiencia y un gran profesional."</p>
+              <div class="author">Reseña verificada en Google</div>
+            </div>
+            <div class="carousel-slide">
+              <div class="stars">★★★★★</div>
+              <p class="quote">"Es un doctor muy humano y profesional, escucha y atiende las necesidades del paciente"</p>
+              <div class="author">Reseña verificada en Google</div>
+            </div>
+            <div class="carousel-slide">
+              <div class="stars">★★★★★</div>
+              <p class="quote">"Excelente servicio<br>En 2 meses 12 kilos<br>Y bajando<br>Dr Cristian te resuelve todas las dudas, la app avena muy dinámica y te consigue  promociones en medicamento para que no pese tanto el gasto.<br>100% recomendable"</p>
+              <div class="author">Reseña verificada en Google</div>
+            </div>
+            <div class="carousel-slide">
+              <div class="stars">★★★★★</div>
+              <p class="quote">"Excelente doctor, muy profesional, da trato personalizado y ayuda no sólo a bajar de peso, además a sentirte bien"</p>
+              <div class="author">Reseña verificada en Google</div>
+            </div>
+            <div class="carousel-slide">
+              <div class="stars">★★★★★</div>
+              <p class="quote">"Excelente servicio"</p>
+              <div class="author">Reseña verificada en Google</div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-controls">
+          <button class="carousel-arrow" data-dir="-1" aria-label="Reseña anterior">‹</button>
+          <span class="carousel-count" id="carouselCount" aria-live="off">1 / 16</span>
+          <button class="carousel-arrow" data-dir="1" aria-label="Reseña siguiente">›</button>
+        </div>
+        <a class="btn-primary" href="https://www.google.com/maps/search/Dr.+Cristian+Ortiz+%7C+Bariatr%C3%ADa+Cl%C3%ADnica+y+Control+de+Peso" target="_blank" rel="noopener">
+          Ver todas las reseñas en Google
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= RECURSOS DIGITALES ================= -->
+  <section class="resources" id="recursos">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Biblioteca de recursos</div>
+        <h2>Guías y recursos complementarios</h2>
+        <p>Material de apoyo para tu tratamiento, pensado como complemento a la consulta médica — no como sustituto del seguimiento personalizado.</p>
+      </div>
+
+      <div class="res-list">
+        <div class="res-item">
+          <div>
+            <h3>Guía Nutricional para tu tratamiento con GLP-1</h3>
+            <div class="meta">Incluye recetario de regalo</div>
+          </div>
+          <div style="display:flex;align-items:center;">
+            <span class="price">$299 MXN</span>
+            <a class="res-cta" href="https://pay.hotmart.com/J107754519O?off=xjymb8yk&amp;bid=1790281707199" target="_blank" rel="noopener">Comprar guía</a>
+          </div>
+        </div>
+
+        <!-- PENDIENTE 1: falta el link de Hotmart de este ebook. En cuanto lo tengas,
+             cambia el <span class="res-cta pending"> de abajo por:
+             <a class="res-cta" href="TU-LINK-AQUI" target="_blank" rel="noopener">Comprar ebook</a> -->
+        <div class="res-item">
+          <div>
+            <h3>GLP-1: lo que nadie te dice antes de usarlos</h3>
+            <div class="meta">Ebook</div>
+          </div>
+          <span class="res-cta pending" title="Próximamente">Próximamente</span>
+        </div>
+
+        <!-- PENDIENTE 2: falta el link de descarga directa de tus guías gratuitas.
+             Cuando lo tengas, cambia el <span class="res-cta pending free"> de abajo por:
+             <a class="res-cta free" href="TU-LINK-AQUI" target="_blank" rel="noopener">Descargar gratis</a> -->
+        <div class="res-item">
+          <div>
+            <h3>Guías gratuitas</h3>
+            <div class="meta">Descarga directa, sin costo</div>
+          </div>
+          <span class="res-cta pending free" title="Próximamente">Próximamente</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= UBICACIÓN ================= -->
+  <section class="location" id="ubicacion">
+    <div class="wrap">
+      <div class="loc-details">
+        <div class="eyebrow">Ubicación y contacto</div>
+        <h2>Visítanos en Monterrey</h2>
+        <h3>Dirección</h3>
+        <p>CAB Medical, Plaza Sikara<br>Cumbres Madeira, Monterrey, Nuevo León</p>
+        <h3>Horario</h3>
+        <p>Atención únicamente con previa cita</p>
+        <h3>Contacto</h3>
+        <p><a href="https://wa.me/528120318198" target="_blank" rel="noopener">WhatsApp: 81 2031 8198</a><br>
+        <a href="https://instagram.com/dr_cristianortiz" target="_blank" rel="noopener">Instagram: @dr_cristianortiz</a></p>
+        <a class="btn-primary" style="margin-top:10px;" href="https://wa.me/528120318198?text=Hola%2C%20quiero%20agendar%20una%20consulta" target="_blank" rel="noopener">Agendar cita por WhatsApp</a>
+      </div>
+      <div class="map-panel">
+        <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="var(--teal-deep)" stroke-width="1.6"><path d="M12 21s-7-6.1-7-11a7 7 0 0 1 14 0c0 4.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        <p>Abre la ubicación en Google Maps para ver cómo llegar a Plaza Sikara, en Cumbres Madeira.</p>
+        <a class="btn-ghost" href="https://www.google.com/maps/search/?api=1&query=CAB+Medical+Plaza+Sikara+Cumbres+Madeira+Monterrey" target="_blank" rel="noopener">Abrir ubicación en Google Maps</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CTA FINAL ================= -->
+  <section class="final-cta">
+    <div class="wrap">
+      <h2>¿Listo para empezar tu tratamiento?</h2>
+      <p>Agenda tu consulta y platicamos si el tratamiento con GLP-1 es adecuado para ti.</p>
+      <a class="btn-primary" href="https://wa.me/528120318198?text=Hola%2C%20quiero%20agendar%20una%20consulta" target="_blank" rel="noopener">Agendar cita por WhatsApp</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>Datos profesionales</h4>
+        <p><strong>Dr. Cristian Ortiz</strong><br>
+        Bariatría Clínica y Control de Peso<br>
+        Médico Cirujano y Partero · U.A.N.L.<br>
+        Bariatría · B.U.A.P.<br>
+        Cédula profesional: 11351854</p>
+      </div>
+      <div>
+        <h4>Consultorio</h4>
+        <p>CAB Medical, Plaza Sikara<br>
+        Cumbres Madeira, Monterrey, N.L.<br>
+        Atención únicamente con previa cita<br>
+        <a href="https://wa.me/528120318198" target="_blank" rel="noopener">WhatsApp: 81 2031 8198</a></p>
+      </div>
+      <div>
+        <h4>Sitio</h4>
+        <p><a href="https://drcristianortiz.com.mx">drcristianortiz.com.mx</a><br>
+        <a href="https://instagram.com/dr_cristianortiz" target="_blank" rel="noopener">@dr_cristianortiz</a><br>
+        <a href="#aviso-privacidad" id="openPrivacy">Aviso de privacidad</a></p>
+      </div>
+    </div>
+    <div class="foot-legal">
+      <p>Aviso de publicidad COFEPRIS: 2619012002A00285</p>
+      <p>La información de este sitio es solo orientativa y no sustituye una consulta médica. Todo tratamiento requiere valoración individual y los resultados varían de una persona a otra.</p>
+      <p>© 2026 Dr. Cristian Ortiz. Todos los derechos reservados.</p>
+    </div>
+  </div>
+</footer>
+
+<dialog class="privacy" id="privacyDialog" aria-labelledby="privacyTitle">
+  <div class="privacy-head">
+    <h2 id="privacyTitle">Aviso de privacidad</h2>
+    <button type="button" class="privacy-close" id="closePrivacy" aria-label="Cerrar">&times;</button>
+  </div>
+  <div class="privacy-body">
+    <p class="upd">Última actualización: septiembre de 2026</p>
+
+    <h3>1. Responsable del tratamiento de tus datos</h3>
+    <p>José Cristian Ortiz Soria (Dr. Cristian Ortiz | Bariatría Clínica y Control de Peso), con domicilio en CAB Medical, Plaza Sikara, Cumbres Madeira, Monterrey, Nuevo León, es responsable del tratamiento de tus datos personales, conforme a la Ley Federal de Protección de Datos Personales en Posesión de los Particulares.</p>
+
+    <h3>2. Datos personales que recabamos</h3>
+    <ul>
+      <li><strong>Identificación y contacto:</strong> nombre, edad, teléfono y, en su caso, correo electrónico.</li>
+      <li><strong>Datos de salud (sensibles):</strong> peso, talla, antecedentes personales y familiares, padecimientos, medicamentos, estudios de laboratorio y de gabinete, y la información clínica que compartas en consulta.</li>
+    </ul>
+    <p>Los recabamos cuando nos escribes por WhatsApp, agendas una cita, acudes a consulta presencial o tomas tu consulta por telemedicina. Los datos de salud se tratan únicamente con tu consentimiento expreso.</p>
+
+    <h3>3. Para qué usamos tus datos</h3>
+    <p><strong>Finalidades necesarias:</strong></p>
+    <ul>
+      <li>Agendar y dar seguimiento a tus citas.</li>
+      <li>Realizar tu valoración médica, indicar tratamiento y dar seguimiento a tu evolución.</li>
+      <li>Integrar y conservar tu expediente clínico conforme a la normatividad sanitaria aplicable.</li>
+      <li>Atenderte por telemedicina y resolver tus dudas sobre tu tratamiento.</li>
+      <li>Gestionar cobros y comprobantes de tus consultas.</li>
+    </ul>
+    <p><strong>Finalidades adicionales:</strong> enviarte información sobre salud, recordatorios y novedades del consultorio. Si no deseas este uso, escríbenos por WhatsApp y dejaremos de usar tus datos para estos fines, sin que afecte tu atención médica.</p>
+
+    <h3>4. Con quién compartimos tus datos</h3>
+    <p>No vendemos ni cedemos tus datos personales. Solo los compartimos con proveedores que nos apoyan en la operación del consultorio (por ejemplo, herramientas de agenda, expediente electrónico, comunicación y almacenamiento) y con autoridades cuando la ley lo exija. Cualquier otra transferencia se hará solo con tu consentimiento.</p>
+
+    <h3>5. Derechos ARCO y revocación del consentimiento</h3>
+    <p>Puedes solicitar el <strong>acceso, rectificación, cancelación u oposición</strong> respecto de tus datos, así como revocar tu consentimiento o limitar su uso, escribiéndonos por WhatsApp al 81 2031 8198 con tu nombre completo y la petición que deseas hacer. Te responderemos en los plazos que marca la ley. La conservación del expediente clínico se rige por la normatividad sanitaria vigente.</p>
+
+    <h3>6. Tecnologías en este sitio</h3>
+    <p>Este sitio puede cargar recursos de terceros (por ejemplo, tipografías de Google) y enlaces a WhatsApp, Instagram y Google Maps, que tienen sus propias políticas de privacidad.</p>
+
+    <h3>7. Cambios a este aviso</h3>
+    <p>Cualquier cambio se publicará en esta misma página.</p>
+
+    <h3>8. Autoridad</h3>
+    <p>Si consideras que tu derecho a la protección de datos personales ha sido vulnerado, puedes acudir ante la autoridad en materia de protección de datos personales (actualmente, la Secretaría Anticorrupción y Buen Gobierno).</p>
+  </div>
+</dialog>
+
+<script>
+  document.getElementById('menuBtn').addEventListener('click', function(){
+    document.getElementById('navLinks').classList.toggle('open');
+  });
+  document.querySelectorAll('#navLinks a').forEach(function(a){
+    a.addEventListener('click', function(){ document.getElementById('navLinks').classList.remove('open'); });
+  });
+
+  (function(){
+    var box = document.getElementById('reviewsCarousel');
+    var track = document.getElementById('carouselTrack');
+    if(!box || !track) return;
+    var slides = track.children;
+    var total = slides.length;
+    var count = document.getElementById('carouselCount');
+    var index = 0;
+    var timer = null;
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    function collapseAll(){
+      box.querySelectorAll('.quote.open').forEach(function(q){
+        q.classList.remove('open');
+        var b = q.nextElementSibling;
+        if(b && b.classList.contains('read-more')) b.textContent = 'Leer más';
+      });
+    }
+    function go(i){
+      index = (i + total) % total;
+      collapseAll();
+      track.style.transform = 'translateX(-' + (index * 100) + '%)';
+      if(count) count.textContent = (index + 1) + ' / ' + total;
+    }
+    function stopAuto(){ if(timer){ clearInterval(timer); timer = null; } }
+    function startAuto(){
+      if(reduceMotion) return;
+      stopAuto();
+      timer = setInterval(function(){
+        if(box.querySelector('.quote.open')) return;
+        go(index + 1);
+      }, 5000);
+    }
+
+    box.querySelectorAll('.carousel-arrow').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        go(index + parseInt(btn.dataset.dir, 10));
+        startAuto();
+      });
+    });
+
+    window.addEventListener('load', function(){
+      Array.prototype.forEach.call(slides, function(slide){
+        var q = slide.querySelector('.quote');
+        if(q && q.scrollHeight > q.clientHeight + 2){
+          var b = document.createElement('button');
+          b.type = 'button'; b.className = 'read-more'; b.textContent = 'Leer más';
+          b.addEventListener('click', function(){
+            var open = q.classList.toggle('open');
+            b.textContent = open ? 'Leer menos' : 'Leer más';
+            if(open) stopAuto(); else startAuto();
+          });
+          q.parentNode.insertBefore(b, q.nextSibling);
+        }
+      });
+    });
+
+    box.addEventListener('mouseenter', stopAuto);
+    box.addEventListener('mouseleave', startAuto);
+    box.addEventListener('touchstart', stopAuto, {passive:true});
+    box.addEventListener('touchend', function(){ setTimeout(startAuto, 1500); });
+    box.addEventListener('focusin', stopAuto);
+    box.addEventListener('focusout', startAuto);
+
+    go(0);
+    startAuto();
+  })();
+</script>
+
+<script>
+  (function(){
+    var dlg=document.getElementById('privacyDialog');
+    var open=document.getElementById('openPrivacy');
+    var close=document.getElementById('closePrivacy');
+    if(!dlg||!open) return;
+    function show(){ if(dlg.showModal){ if(!dlg.open) dlg.showModal(); } else { dlg.setAttribute('open',''); } }
+    open.addEventListener('click',function(e){ e.preventDefault(); show(); });
+    close.addEventListener('click',function(){ dlg.close ? dlg.close() : dlg.removeAttribute('open'); });
+    dlg.addEventListener('click',function(e){ if(e.target===dlg) dlg.close(); });
+    if(location.hash==='#aviso-privacidad') show();
+  })();
+</script>
+
+</body>
+</html>
